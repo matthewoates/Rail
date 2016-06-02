@@ -1,0 +1,21 @@
+{
+  "name": "rail",
+  "version": "0.0.1",
+  "description": "The modern web app performance standard.",
+  "main": "lib/Rail.js",
+  "dependencies": {
+    "babel-core": "6.9.0",
+    "babel-loader": "6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "logdown": "^1.2.4",
+    "webpack": "^1.13.1",
+    "webpack-notifier": "^1.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Oates",
+  "license": "MIT"
+}
