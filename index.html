@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script>
+            function now() {
+                return new Date().getTime();
+            }
+
+            function wait(ms) {
+                var start = now();
+
+                while (now() - start < ms) {}
+            }
+
+            function intervalWait(ms, interval) {
+                setInterval(function () {
+                    wait(ms);
+                }, interval)
+            }
+        </script>
+    </head>
+
+    <body>
+        <button onclick="wait(10)">Block 10 ms</button>
+        <button onclick="wait(25)">Block 25 ms</button>
+        <button onclick="wait(60)">Block 60 ms</button>
+        <button onclick="wait(110)">Block 110 ms</button>
+
+        <button onclick="intervalWait(10, 1000)">Repeatedly block 10 ms then wait 1000 ms</button>
+        <button onclick="intervalWait(25, 1000)">Repeatedly block 25 ms then wait 1000 ms</button>
+        <button onclick="intervalWait(60, 1000)">Repeatedly block 60 ms then wait 1000 ms</button>
+        <button onclick="intervalWait(110, 1000)">Repeatedly block 110 ms then wait 1000 ms</button>
+
+        <button onclick="clearIntervals()">Clear wait intervals</button>
+    </body>
+</html>
